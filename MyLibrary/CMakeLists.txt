@@ -1,0 +1,34 @@
+﻿#Create project
+project (MyLibrary)
+
+#Create library
+add_library(MyLibrary STATIC)
+
+#Set to C++20 standard
+set_property(TARGET MyLibrary PROPERTY CXX_STANDARD 20)
+
+#Source files and private headers
+target_sources(MyLibrary PRIVATE
+	"MyLibrary.cpp"
+)
+
+#Public headers
+target_sources(MyLibrary PUBLIC 
+	FILE_SET HEADERS TYPE HEADERS BASE_DIRS ${PROJECT_SOURCE_DIR} FILES
+	"MyLibrary.h"
+)
+
+#Link SDL2 libraries
+target_link_libraries(MyLibrary
+	PRIVATE
+	$<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
+	$<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
+)
+
+#Install project
+install (TARGETS MyLibrary
+	ARCHIVE DESTINATION "${PROJECT_NAME}/lib"
+	LIBRARY DESTINATION "${PROJECT_NAME}/lib"
+	RUNTIME DESTINATION "${PROJECT_NAME}/bin"
+	FILE_SET HEADERS DESTINATION "${PROJECT_NAME}/include"
+)
