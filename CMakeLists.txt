@@ -7,10 +7,10 @@ if(VCPKG_JSON_TIMESTAMP_PREV STREQUAL vcpkg_json_timestamp)
 else()
     set(VCPKG_MANIFEST_INSTALL ON CACHE STRING "" FORCE)
 endif()
-include("C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/buildsystems/vcpkg.cmake")
+#include("C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/buildsystems/vcpkg.cmake")
+project (MyLibrary)
 set(VCPKG_JSON_TIMESTAMP_PREV "${vcpkg_json_timestamp}" CACHE STRING "" FORCE)
 
-project (MyLibrary)
 
 #find vcpkg packages
 find_package(SDL2 CONFIG REQUIRED)
