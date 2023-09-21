@@ -3,7 +3,7 @@
     {
       "version": "6.9.0",
       "port-version": 0,
-      "git-tree": "de72035e76c167ea4be24716ec2dae10710fbd39"
+      "git-tree": "0efcac3b9429bf38a7b2fc5ff6c346c98e6c237b" //run "git rev-parse COMMIT-ID:ports/mylibrary"
     }
   ]
 }
