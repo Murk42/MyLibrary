@@ -25,6 +25,8 @@ target_link_libraries(MyLibrary
 	$<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
 )
 
+set(CMAKE_INSTALL_PREFIX ".")
+
 #Install project
 install (TARGETS MyLibrary
 	ARCHIVE DESTINATION "${PROJECT_NAME}/lib"
