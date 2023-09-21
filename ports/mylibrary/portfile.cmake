@@ -1,9 +1,9 @@
 vcpkg_from_github(
 	OUT_SOURCE_PATH SOURCE_PATH
 	REPO Murk42/MyLibrary
-	REF 38406fbf109556455e76823cef287d36fa0b3843
-	SHA512 7b2bb7acb2a8ff07bff59cfa27247a7b2cced03828919cd65cc0c8cf1f724f5f1e947ed6992dcdbc913fb470694a52613d1861eaaadbf8903e94eb9cdfe4d000
-	HEAD_REF main
+	REF HEAD
+	SHA512 0
+	HEAD_REF master
 )
 
 vcpkg_configure_cmake(
