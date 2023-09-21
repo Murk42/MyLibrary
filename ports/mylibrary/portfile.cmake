@@ -2,7 +2,7 @@ vcpkg_from_github(
 	OUT_SOURCE_PATH SOURCE_PATH
 	REPO Murk42/MyLibrary
 	REF HEAD
-	SHA512 0
+	SHA512 19a1f95c2f56a27ced90227b5e2754a602a08e69
 	HEAD_REF master
 )
 
