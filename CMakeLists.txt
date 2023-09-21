@@ -1,5 +1,6 @@
 ﻿cmake_minimum_required (VERSION 3.23)
 
+project (MyLibrary)
 #Used to run vcpkg to check for new libraries
 file(TIMESTAMP "${CMAKE_CURRENT_LIST_DIR}/vcpkg.json" vcpkg_json_timestamp)
 if(VCPKG_JSON_TIMESTAMP_PREV STREQUAL vcpkg_json_timestamp)
